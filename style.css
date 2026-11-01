@@ -1,0 +1,155 @@
+:root {
+  --bg-page: #0f172a;
+  --bg-card: #1e293b;
+  --bg-header: #334155;
+  --bg-row-even: #1e293b;
+  --bg-row-odd: #162032;
+  --bg-row-hover: #283548;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --success-bg: rgba(16, 185, 129, 0.15);
+  --success-text: #34d399;
+  --error-bg: rgba(239, 68, 68, 0.15);
+  --error-text: #f87171;
+  --border-color: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  padding: 2.5rem 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.subtitle code {
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+}
+
+.badge-loading {
+  background-color: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+}
+
+.badge-success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.badge-error {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: var(--bg-header);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+th, td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-row-even);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--bg-row-odd);
+}
+
+tbody tr:hover {
+  background-color: var(--bg-row-hover);
+  transition: background-color 0.15s ease;
+}
+
+td.nombre-col {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+td.email-col a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+td.email-col a:hover {
+  text-decoration: underline;
+}
+
+td.empresa-col span {
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: #e2e8f0;
+}
+
+.loading-message {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2.5rem;
+}

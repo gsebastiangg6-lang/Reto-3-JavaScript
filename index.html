@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Contactos | JSONPlaceholder API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1>Directorio de Contactos</h1>
+        <p class="subtitle">Datos consumidos dinámicamente desde <code>JSONPlaceholder API</code></p>
+      </div>
+      <span id="status-badge" class="badge badge-loading">Cargando datos...</span>
+    </header>
+
+    <div class="table-wrapper">
+      <table id="tabla-contactos">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Empresa</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla">
+          <!-- Los datos obtenidos de la API se insertan dinámicamente aquí -->
+          <tr>
+            <td colspan="4" class="loading-message">Obteniendo contactos desde la API...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
